@@ -4,7 +4,7 @@ global:
   outside_temperature: sensor.dark_sky_temperature
   outside_humidity: sensor.dark_sky_humidity
   #alarm: alarm_control_panel.alarm_system
-  inside_temperature: sensor.temp_woonkamer
+  #inside_temperature: sensor.temp_woonkamer
   favorites_homepage: 'true'
   show_covers: closed
 #  custom_popups:
