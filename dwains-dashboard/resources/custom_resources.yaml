@@ -69,3 +69,7 @@
 # fold-entity-row
 - url: /hacsfiles/lovelace-fold-entity-row/fold-entity-row.js
   type: module
+
+# Light Entity Card
+- url: /local/light-entity-card/dist/light-entity-card.js
+  type: js
