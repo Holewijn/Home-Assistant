@@ -1,0 +1,24 @@
+homeassistant: 
+  # Customization file
+  customize: !include customize.yaml
+  # List of folders that can be used as sources for sending files.
+  allowlist_external_dirs:
+    - /config
+  # Load packages
+  packages: !include_dir_named integrations/
+
+# Discover some devices automatically
+#discovery:
+
+# Load scripts
+script: !include scripts.yaml
+
+# Load Scenes
+# https://www.home-assistant.io/docs/scene/editor/
+scene: !include scenes.yaml
+
+# Lovelace Mode
+lovelace:
+  mode: yaml
+  # Include external resource
+  resources: !include dwains-dashboard/resources/custom_resources.yaml

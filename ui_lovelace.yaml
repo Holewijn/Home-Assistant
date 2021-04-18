@@ -1,0 +1,8 @@
+title: Home Assistant
+views:
+  - title: Lovelace
+    cards:
+      - type: markdown
+        title: Lovelace
+        content: >
+          Welcome to **Lovelace UI**.

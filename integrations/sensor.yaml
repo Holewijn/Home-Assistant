@@ -1,0 +1,13 @@
+---
+# Sensors are gathering information about states and conditions.
+#
+# This loads up my sensor configurations
+#
+# https://www.home-assistant.io/components/sensor/
+#
+sensor:
+  # https://www.home-assistant.io/integrations/dsmr_reader/
+  - platform: dsmr_reader
+
+
+
