@@ -1,0 +1,21 @@
+input_select:
+  
+  radio_station:
+    name: 'Select Radio Station:'
+    options:
+      - Radio 538
+      - Q Music
+      - Radio Veronica
+      - Slam!
+      - Sky Radio
+      - FunX NL
+      
+  googlehome_radio:
+    name: 'Select Speakers:'
+    options:
+      - Woonkamer
+      - Keuken
+      - Slaapkamer 
+      - Office
+    initial: Office
+    icon: mdi:speaker-wireless 

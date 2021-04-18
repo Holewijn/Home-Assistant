@@ -1,0 +1,13 @@
+---
+# The google_assistant component allows you to control things
+# via Google Assistant (on your mobile or tablet) or a Google Home device.
+#
+# https://www.home-assistant.io/components/google_assistant
+#
+google_assistant:
+  # Project ID from the Actions on Google console
+  project_id: !secret google_project 
+  # Service account information.
+  service_account: !include ../Home Assistant-c8937c2dcf9f.json
+  # Actively report state changes on entities
+  #report_state: true

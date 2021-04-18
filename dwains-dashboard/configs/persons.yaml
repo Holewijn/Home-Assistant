@@ -1,0 +1,15 @@
+# https://dwainscheeren.github.io/dwains-lovelace-dashboard/configuration/persons.html
+persons:
+  - name: Michiel
+    track: person.michiel_holewijn
+    # show_map: 'false'
+    # addons:
+    #   - name: Map
+    #     path: 'dwains-theme/addons/persons/map-jeroen/page.yaml'
+    page_entities:
+      columns: 4
+      entities:
+        - entity: sensor.oneplus_michiel_batterijniveau
+        - entity: sensor.oneplus_michiel_batterij_laadstatus
+        - entity: sensor.oneplus_michiel_gegeocodeerde_locatie
+        - entity: sensor.oneplus_michiel_stappen_sensor

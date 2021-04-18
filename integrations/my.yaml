@@ -1,0 +1,5 @@
+---
+# This integration handles redirects from the My Home Assistant service.
+# My Home Assistant allows the documentation to link you to specific pages in your
+# Home Assistant instance. See the My Home Assistant FAQ for more information.
+my:
