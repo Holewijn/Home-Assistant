@@ -1,3 +1,0 @@
-# DSMR Reader
-sensor:
-  - platform: dsmr_reader
