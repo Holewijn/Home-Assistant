@@ -8,4 +8,4 @@ binary_sensor:
     name: "Sonarr"
     payload_on: "started"
     payload_off: "stopped"
-    value_template: "{{ value_json.status }}"
+    value_template: '{{value_json.status}}'
