@@ -51,7 +51,7 @@
                 animation: true
             - type: 'custom:uptime-card'
               entity: binary_sensor.bitwarden
-              icon: 'fas:key'
+              icon: 'mdi:key'
               name: Bitwarden
               hours_to_show: 72
               status_adaptive_color: true
