@@ -81,3 +81,7 @@
 # Auto Reload
 - url: /hacsfiles/lovelace-auto-reload-card/auto-reload-card.js
   type: module
+
+# Mini graph card
+url: /hacsfiles/mini-graph-card/mini-graph-card-bundle.js
+type: module
