@@ -117,3 +117,37 @@
               tap_action:
                 action: url
                 url_path: 'https://www.google.com/'
+            - type: 'custom:uptime-card'
+              entity: switch.tower_docker_binhex_radarr
+              icon: 'mdi:google'
+              name: Radarr
+              hours_to_show: 72
+              status_adaptive_color: true
+              average_text: '% uptime'
+              alias:
+                ok: Up
+                ko: Down
+              blink:
+                effect: fade
+                target: card
+                speed: 1
+              color:
+                icon: gray
+                ok: '#45C669'
+                ko: '#C6B145'
+                half: '#C66445'
+                none: '#C9C9C9'
+                title: gray
+              show:
+                header: true
+                title: true
+                icon: true
+                footer: true
+                status: true
+                timeline: true
+                average: true
+              tooltip:
+                animation: true
+              tap_action:
+                action: url
+                url_path: 'https://www.google.com/'
