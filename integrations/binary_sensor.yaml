@@ -3,3 +3,9 @@
 binary_sensor:
   - platform: uptimerobot
     api_key: !secret uptimerobot
+  - platform: mqtt
+    state_topic: "homeassistant/tower/binhex-radarr/dockerState"
+    name: "Sonarr"
+    payload_on: "started"
+    payload_off: "stopped"
+    value_template: "{{ value_json.status }}"
