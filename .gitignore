@@ -71,3 +71,5 @@ Home Assistant-c8937c2dcf9f.json
 H48RCV~O
 custom_components/ 
 deps/
+.vscode/settings.json
+.vscode/extensions.json
