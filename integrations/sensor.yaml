@@ -6,3 +6,131 @@
 # https://www.home-assistant.io/components/sensor/
 #
 sensor:
+  - platform: buienradar
+    name: "Genemuiden"
+    # Force 'Meetstation Apeldoorn' to be used:
+    latitude: 52.70
+    longitude: 5.88
+    monitored_conditions:
+      - stationname
+      - barometerfc
+      - barometerfcname
+      - conditioncode
+      - condition
+      - conditiondetailed
+      - conditionexact
+      - symbol
+      - feeltemperature
+      - humidity
+      - temperature
+      - groundtemperature
+      - windspeed
+      - windforce
+      - winddirection
+      - windazimuth
+      - pressure
+      - visibility
+      - windgust
+      - precipitation
+      - irradiance
+      - precipitation_forecast_average
+      - precipitation_forecast_total
+      - rainlast24hour
+      - rainlasthour
+      # conditions for forecasted data:
+      - symbol_1d
+      - symbol_2d
+      - symbol_3d
+      - symbol_4d
+      - symbol_5d
+      - temperature_1d
+      - temperature_2d
+      - temperature_3d
+      - temperature_4d
+      - temperature_5d
+      - mintemp_1d
+      - rainchance_1d
+      - rainchance_2d
+      - sunchance_1d
+      - sunchance_2d
+      - rain_1d
+      - rain_2d
+      - minrain_1d
+      - maxrain_1d
+      - windforce_1d
+      - windforce_2d
+      - windspeed_1d
+      - windspeed_2d
+      - winddirection_1d
+      - winddirection_2d
+      - windazimuth_1d
+      - windazimuth_2d
+
+  - platform: rest
+    scan_interval: 3600
+    resource: !secret ambee-resource   # ambee-resource: https://api.ambeedata.com/latest/pollen/by-lat-lng?lat=xx.xxxxxx&lng=x.xxxxxx
+    name: "pollen"
+    headers:
+      content-type: "application/json"
+      x-api-key: !secret ambee-api # zodat je veilig het kunt delen xxxxxx
+    json_attributes_path: "$.data[0]"
+    json_attributes:
+      - Risk
+      - Count
+      - updatedAt
+
+  - platform: template
+    sensors:
+      pollen_tree_risk:
+        icon_template: "mdi:tree-outline"
+        friendly_name: "Bomen"
+        value_template: >-
+          {% set state = state_attr('sensor.pollen', 'Risk')['tree_pollen'] %}
+          {% if state == "Low" %}Weinig
+          {% elif state == "Moderate"%}Middel
+          {% elif state == "High"%}Hoog
+          {% elif state == "Very High"%}zeer hoog
+          {% else %}Onbekend{% endif %}
+      pollen_weed_risk:
+        icon_template: "mdi:nature"
+        friendly_name: "Onkruid"
+        value_template: >-
+          {% set state = state_attr('sensor.pollen', 'Risk')['weed_pollen'] %}
+          {% if state == "Low" %}Weinig
+          {% elif state == "Moderate"%}Middel
+          {% elif state == "High"%}Hoog
+          {% elif state == "Very High"%}zeer hoog
+          {% else %}Onbekend{% endif %}
+      pollen_grass_risk:
+        icon_template: "mdi:grass"
+        friendly_name: "Gras"
+        value_template: >-
+          {% set state = state_attr('sensor.pollen', 'Risk')['grass_pollen'] %}
+          {% if state == "Low" %}Weinig
+          {% elif state == "Moderate"%}Middel
+          {% elif state == "High"%}Hoog
+          {% elif state == "Very High"%}zeer hoog
+          {% else %}Onbekend{% endif %}
+      pollen_tree_count:
+        icon_template: "mdi:tree-outline"
+        friendly_name: "Bomen"
+        unit_of_measurement: " /m³"
+        value_template: "{{ state_attr('sensor.pollen', 'Count')['tree_pollen'] }}"
+        
+      pollen_weed_count:
+        icon_template: "mdi:nature"
+        friendly_name: "Onkruid"
+        unit_of_measurement: " /m³"
+        value_template: "{{ state_attr('sensor.pollen', 'Count')['weed_pollen'] }}"
+        
+      pollen_grass_count:
+        icon_template: "mdi:grass"
+        friendly_name: "Gras"
+        unit_of_measurement: " /m³"
+        value_template: "{{ state_attr('sensor.pollen', 'Count')['grass_pollen'] }}"
+        
+      pollen_last_updated:
+        icon_template: "mdi:clock"
+        friendly_name: "Laatste update"
+        device_class: timestamp
+        value_template: "{{ state_attr('sensor.pollen', 'updatedAt') }}"
