@@ -1,0 +1,5 @@
+---
+
+binary_sensor:
+  - platform: uptimerobot
+    api_key: !secret uptimerobot
