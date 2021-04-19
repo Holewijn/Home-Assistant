@@ -61,14 +61,14 @@
             name: Gevoelstemperatuur
             icon: 'fas:thermometer-half'
             entities:
-              - sensor.apeldoorn_feel_temperature
+              - sensor.genemuiden_feel_temperature
             line_color: '#299ec2'
           - cards:
             type: 'custom:mini-graph-card'
             name: Grondtemperatuur
             icon: 'fas:thermometer-half'
             entities:
-              - sensor.apeldoorn_ground_temperature
+              - sensor.genemuiden_ground_temperature
             line_color: '#299ec2'
           - cards:
             Refresh: null
@@ -90,7 +90,7 @@
           - cards:
             type: 'custom:mini-graph-card'
             entities:
-              - sensor.apeldoorn_rain_last_24h
+              - sensor.genemuiden_rain_last_24h
             line_color: '#299ec2'
             name: Afgelopen 24uur
             show:
@@ -98,7 +98,7 @@
           - cards:
             type: 'custom:mini-graph-card'
             entities:
-              - sensor.apeldoorn_rain_last_hour
+              - sensor.genemuiden_rain_last_hour
             line_color: '#299ec2'
             name: Afgelopen uur
             show:
@@ -129,22 +129,22 @@
                 - entity: sun.sun
                 - entity: sensor.knmi_weercode
                 - entity: sensor.knmi_weer_waarschuwing
-                - entity: sensor.apeldoorn_barometer
-                - entity: sensor.apeldoorn_barometer_value
-                - entity: sensor.apeldoorn_humidity
-                - entity: sensor.apeldoorn_pressure
-                - entity: sensor.apeldoorn_visibility
+                - entity: sensor.genemuiden_barometer
+                - entity: sensor.genemuiden_barometer_value
+                - entity: sensor.genemuiden_humidity
+                - entity: sensor.genemuiden_pressure
+                - entity: sensor.genemuiden_visibility
                 - type: custom:fold-entity-row
                   head:
                     type: section
                     label: Meer informatie
                   entities:
-                    - entity: sensor.apeldoorn_wind_speed
+                    - entity: sensor.genemuiden_wind_speed
                       name: Wind snelheid
-                    - entity: sensor.apeldoorn_wind_direction
+                    - entity: sensor.genemuiden_wind_direction
                       name: Wind richting
                       icon: 'fas:compass'
-                    - entity: sensor.apeldoorn_ground_temperature
+                    - entity: sensor.genemuiden_ground_temperature
                       name: Grond temperatuur
             type: entities
 ##Pollen
