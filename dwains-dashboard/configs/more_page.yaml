@@ -4,5 +4,5 @@ more_page:
     addons:
       - name: Weather
         main_menu: 'true' #Show this addon in the main navigation bar!
-        icon: fas:cloud-sun-rain
+        icon: mdi:weather-partly-snowy-rainy
         path: 'dwains-dashboard/addons/more_page/weather/page.yaml'
