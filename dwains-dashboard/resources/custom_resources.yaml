@@ -69,3 +69,15 @@
 # fold-entity-row
 - url: /hacsfiles/lovelace-fold-entity-row/fold-entity-row.js
   type: module
+
+# Light Entity Card
+- url: /local/light-entity-card/dist/light-entity-card.js
+  type: js
+
+# Neerslag card
+- url: /hacsfiles/home-assistant-neerslag-card/neerslag-card.js
+  type: module
+
+# Auto Reload
+- url: /hacsfiles/lovelace-auto-reload-card/auto-reload-card.js
+  type: module

@@ -1,48 +1,86 @@
-# https://dwainscheeren.github.io/dwains-lovelace-dashboard/configuration/rooms.html
+rooms:
+# Woonkamer
+  - name: Woonkamer
+    icon: mdi:sofa
+    #light: group.woonkamer_lights
+    #temperature: sensor.temp_woonkamer
+    #humidity: sensor.temp_woonkamer_humidity
+    #pressure: sensor.temp_woonkamer_pressure
+    #motion: binary_sensor.motion_woonkamer
+    #media_player: group.woonkamer_mediaplayers
 
- rooms:
-   - name: Hallway
-     icon: mdi:key
-#     light: light.hallway
-#     temperature: sensor.hallway_temperature
-#     climate: climate.hallway_climate
-#     humidity: sensor.halway_humidity
-#     motion: binary_sensor.hallway_sensor_motion
-     door: binary_sensor.openclose_3
-#     window: binary_sensor.hallway_window_contact
-#     safety: sensor.smoke_sensor
-#     device: switch.television
-#     vacuum: 
-#       entity: vacuum.rockrobo
-#       camera: camera.rockrobo_map
-#     plant: plant.hallway_plant
-#     media_player: media_player.awesome_hallway_tv
-#     more_entities:
-#       entities:
-#         - entity: sensor.hallway_motion_battery_level
-#         - entity: sensor.smokedetector_battery
-   - name: Garage
-     icon: mdi:garage
-#     light: group.garage_lights
-#     door: group.garage_doors
-#     addons:
-#       - name: Hello room
-#         icon: mdi:puzzle
-#         path: 'dwains-theme/addons/rooms/hello-room/page.yaml'
-#         button_path: 'dwains-theme/addons/rooms/hello-room/button.yaml'
-#         data:
-#           some_data: 'This is some data parsed.'
-#           some_other_data: 'and some other data.'
-#           entity: vacuum.roborock
-   - name: Bedroom
-     icon: fal:bed
-#     more_entities:
-#       columns: 2 #optional
-#       entities:
-#         - entity: sensor.name1
-#         - entity: sensor.name2
-#     page_entities:
-#       columns: 1 #optional
-#       entities:
-#         - entity: sensor.name1
-#         - entity: sensor.name2
+# Eetkamer
+  - name: Eetkamer
+    icon: mdi:silverware-fork-knife
+    #light: group.eetkamer_lights
+    #climate: climate.woonkamer
+    #temperature: sensor.woonkamer_temperature
+    #humidity: sensor.woonkamer_humidity
+
+# Keuken
+  - name: Keuken
+    icon: mdi:fridge
+    #light: group.keuken_lights
+    #media_player: media_player.hub_keuken
+    #device: group.keuken_devices
+
+# Slaapkamer
+  - name: Slaapkamer
+    icon: mdi:bed-king
+    #light: group.slaapkamer_lights
+    #temperature: sensor.temp_slaapkamer
+    #humidity: sensor.temp_slaapkamer_humidity
+    #pressure: sensor.temp_slaapkamer_pressure
+    #motion: binary_sensor.motion_slaapkamer
+    #window: binary_sensor.contact_slaapkamerraam
+    #cover: cover.slaapkamer
+    #media_player: media_player.tv_slaapkamer
+
+# Office
+  - name: Kleine kamer
+    icon: mdi:briefcase
+    #light: group.kleine_kamer
+    #temperature: sensor.temp_kleine_kamer
+    #humidity: sensor.temp_kleine_kamer_humidity
+    #pressure: sensor.temp_kleine_kamer_pressure
+    #window: binary_sensor.contact_kleine_kamerraam
+
+# Logeerkamer
+  - name: Logeerkamer
+    icon: mdi:bed
+    #light: light.logeerkamer
+    #temperature: sensor.temp_logeerkamer
+    #humidity: sensor.temp_logeerkamer_humidity
+    #pressure: sensor.temp_logeerkamer_pressure
+    #window: binary_sensor.contact_logeerkamerraam
+
+# Badkamer
+  - name: Badkamer
+    icon: mdi:shower-head
+    #temperature: sensor.temp_badkamer
+    #humidity: sensor.temp_badkamer_humidity
+    #pressure: sensor.temp_badkamer_pressure
+
+# Hal
+  - name: Hal
+    icon: mdi:key-variant
+    #light: group.other_lights
+
+# Tuin
+  - name: Tuin
+    icon: mdi:tree
+    #light: group.buiten_lights
+    #temperature: sensor.temp_tuin
+    #humidity: sensor.temp_tuin_humidity
+    #pressure: sensor.temp_tuin_pressure
+    #motion: binary_sensor.motion_tuinhuis
+    #door: group.tuin_contact
+
+# Zolder
+  - name: Zolder
+    icon: mdi:home-roof
+    #temperature: sensor.temp_zolder
+    #humidity: sensor.temp_zolder_humidity
+    #pressure: sensor.temp_zolder_pressure
+    #window: binary_sensor.contact_zolderraam
+    #device: group.zolder_devices
