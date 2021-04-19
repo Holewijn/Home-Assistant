@@ -8,7 +8,7 @@
 sensor:
   - platform: buienradar
     name: "Genemuiden"
-    # Force 'Meetstation Apeldoorn' to be used:
+    # Force 'Meetstation Marknesse' to be used:
     latitude: 52.70
     longitude: 5.88
     monitored_conditions:
@@ -66,6 +66,7 @@ sensor:
       - windazimuth_1d
       - windazimuth_2d
 
+# Ambee Pollen Sensor
   - platform: rest
     scan_interval: 3600
     resource: !secret ambee-resource   # ambee-resource: https://api.ambeedata.com/latest/pollen/by-lat-lng?lat=xx.xxxxxx&lng=x.xxxxxx
@@ -134,3 +135,19 @@ sensor:
         friendly_name: "Laatste update"
         device_class: timestamp
         value_template: "{{ state_attr('sensor.pollen', 'updatedAt') }}"
+
+# KNMI
+  - platform: scrape
+    resource: https://www.knmi.nl/nederland-nu/weer/waarschuwingen/overijsse; #change provincie
+    select: "div.alert__heading"
+    name: "knmi weercode"
+    scan_interval: 300
+
+  - platform: scrape
+    resource: https://www.knmi.nl/nederland-nu/weer/waarschuwingen/overijssel #change provincie
+    select: "a.alert__description"
+    name: "knmi weer waarschuwing"
+    scan_interval: 300 
+  
+  - platform: moon 
+  - platform: season
