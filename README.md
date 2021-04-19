@@ -13,6 +13,8 @@
 </a>
 </p>
 
+---
+
 <p align="center">Created by <a href="https://github.com/Holewijn">Michiel Holewijn</a> based on <a href="https://dwainscheeren.github.io/dwains-lovelace-dashboard/">Dwains Dashboard</a>
 </p>
 
