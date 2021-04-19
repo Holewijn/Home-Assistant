@@ -85,3 +85,7 @@
 # Mini graph card
 - url: /hacsfiles/mini-graph-card/mini-graph-card-bundle.js
   type: module
+
+# Uptime card
+- url: /hacsfiles/uptime-card/uptime-card.js
+  type: module
