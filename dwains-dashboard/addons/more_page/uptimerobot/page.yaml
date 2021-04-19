@@ -19,7 +19,7 @@
           items_classes: 'col-xs-12 col-md-12'
           cards:
             - type: 'custom:uptime-card'
-              entity: binary_sensor.homeassistant
+              entity: binary_sensor.home_assistant
               icon: 'hass:home-assistant'
               name: Home Assistant
               hours_to_show: 72
