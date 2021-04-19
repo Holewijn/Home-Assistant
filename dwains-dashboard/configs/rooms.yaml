@@ -1,38 +1,36 @@
 rooms:
-# Woonkamer
   - name: Woonkamer
-    icon: fal:couch
+    icon: mdi:sofa
 
-# Eetkamer
   - name: Eetkamer
-    icon: fal:utensils
-
+    icon: mdi:silverware-fork-knife
+0
 # Keuken
   - name: Keuken
-    icon: fal:refrigerator
+    icon: mdi:fridge
 
 # Slaapkamer
   - name: Slaapkamer
-    icon: fal:bed-alt
+    icon: mdi:bed-king
 
 # Office
   - name: Kleine kamer
-    icon: fal:briefcase
+    icon: mdi:briefcase
 # Logeerkamer
   - name: Logeerkamer
-    icon: fal:bed
+    icon: mdi:bed
 # Badkamer
   - name: Badkamer
-    icon: fal:bath
+    icon: mdi:shower-head
 
 # Hal
   - name: Hal
-    icon: fal:key-skeleton
+    icon: mdi:key-variant
 
 # Tuin
   - name: Tuin
-    icon: fal:tree-alt
+    icon: mdi:tree
 
 # Zolder
   - name: Zolder
-    icon: fal:box-full
+    icon: mdi:home-roof
