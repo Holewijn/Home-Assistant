@@ -12,5 +12,5 @@ more_page:
         path: 'dwains-dashboard/addons/more_page/climate_dashboard/page.yaml'
       - name: UptimeRobot
         main_menu: 'true' #Show this addon in the main navigation bar!
-        icon: fas:cloud-upload-alt
+        icon: mdi:cloud-upload-outline
         path: 'dwains-dashboard/addons/more_page/uptimerobot/page.yaml'
