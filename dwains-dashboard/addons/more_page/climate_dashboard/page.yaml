@@ -139,13 +139,13 @@
                 type: 'custom:button-card'
             type: horizontal-stack
           - entities:
-              - entity: sensor.apeldoorn_feel_temperature
+              - entity: sensor.genemuiden_feel_temperature
                 name: Gevoelstemperatuur
                 secondary_info: last-updated
               - entity: sensor.netatmo_netatmo_huis_netatmo_woonkamer_netatmo_tuin_humidity
                 name: Humidity
                 secondary_info: last-updated
-              - entity: sensor.apeldoorn_pressure
+              - entity: sensor.genemuiden_pressure
                 name: Pressure
                 secondary_info: last-updated
               - type: custom:fold-entity-row
@@ -153,7 +153,7 @@
                   type: section
                   label: Meer informatie
                 entities:
-                  - entity: sensor.apeldoorn_wind_speed
+                  - entity: sensor.genemuiden_wind_speed
                     name: Wind snelheid    
                     secondary_info: last-updated
             type: entities
@@ -374,7 +374,7 @@
                   type: section
                   label: Meer informatie
                 entities:
-                  - entity: sensor.apeldoorn_wind_speed
+                  - entity: sensor.genemuiden_wind_speed
                     name: Wind snelheid    
                     secondary_info: last-updated
             type: entities
