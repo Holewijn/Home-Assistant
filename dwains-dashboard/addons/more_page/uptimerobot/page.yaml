@@ -118,8 +118,8 @@
                 action: url
                 url_path: 'https://www.google.com/'
             - type: 'custom:uptime-card'
-              entity: "{{ state_attr('switch.tower_docker_binhex_sonarr', 'status') }}"
-              icon: 'mdi:google'
+              entity: 
+              icon: 'mdi:movie'
               name: Radarr
               hours_to_show: 72
               status_adaptive_color: true
