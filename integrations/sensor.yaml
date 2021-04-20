@@ -170,13 +170,13 @@ sensor:
     value_template: "{{ value }}"
 # Radarr
   - platform: command_line
-    name: "NZBGet Online"
+    name: "Radarr Online"
     command: response=$(curl -LIk -m 3 192.168.1.190:7878 -o /dev/null -w "%{http_code}\n" -s); test "$response" -ge 200 && echo "Online" || echo "Offline"
     scan_interval: 90
     value_template: "{{ value }}"
 # WATERMETER
   - platform: command_line
-    name: "NZBGet Online"
+    name: "Watermeter Online"
     command: response=$(curl -LIk -m 3 192.168.1.238 -o /dev/null -w "%{http_code}\n" -s); test "$response" -ge 200 && echo "Online" || echo "Offline"
     scan_interval: 90
     value_template: "{{ value }}"
