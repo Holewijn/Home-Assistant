@@ -151,3 +151,105 @@
               tap_action:
                 action: url
                 url_path: 'http://192.168.1.190:7878'
+            - type: 'custom:uptime-card'
+              entity: binary_sensor.sonarr_online
+              icon: 'mdi:movie'
+              name: Sonarr
+              hours_to_show: 72
+              status_adaptive_color: true
+              average_text: '% uptime'
+              alias:
+                ok: Up
+                ko: Down
+              blink:
+                effect: fade
+                target: card
+                speed: 1
+              color:
+                icon: gray
+                ok: '#45C669'
+                ko: '#C6B145'
+                half: '#C66445'
+                none: '#C9C9C9'
+                title: gray
+              show:
+                header: true
+                title: true
+                icon: true
+                footer: true
+                status: true
+                timeline: true
+                average: true
+              tooltip:
+                animation: true
+              tap_action:
+                action: url
+                url_path: 'http://192.168.1.190:8200'
+            - type: 'custom:uptime-card'
+              entity: binary_sensor.nzbget_online
+              icon: 'mdi:download'
+              name: nzbget
+              hours_to_show: 72
+              status_adaptive_color: true
+              average_text: '% uptime'
+              alias:
+                ok: Up
+                ko: Down
+              blink:
+                effect: fade
+                target: card
+                speed: 1
+              color:
+                icon: gray
+                ok: '#45C669'
+                ko: '#C6B145'
+                half: '#C66445'
+                none: '#C9C9C9'
+                title: gray
+              show:
+                header: true
+                title: true
+                icon: true
+                footer: true
+                status: true
+                timeline: true
+                average: true
+              tooltip:
+                animation: true
+              tap_action:
+                action: url
+                url_path: 'http://192.168.1.190:6789'
+            - type: 'custom:uptime-card'
+              entity: binary_sensor.water_meter_sensor
+              icon: 'mdi:water'
+              name: Watermeter
+              hours_to_show: 72
+              status_adaptive_color: true
+              average_text: '% uptime'
+              alias:
+                ok: Up
+                ko: Down
+              blink:
+                effect: fade
+                target: card
+                speed: 1
+              color:
+                icon: gray
+                ok: '#45C669'
+                ko: '#C6B145'
+                half: '#C66445'
+                none: '#C9C9C9'
+                title: gray
+              show:
+                header: true
+                title: true
+                icon: true
+                footer: true
+                status: true
+                timeline: true
+                average: true
+              tooltip:
+                animation: true
+              tap_action:
+                action: url
+                url_path: ''
