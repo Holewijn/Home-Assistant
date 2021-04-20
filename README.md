@@ -26,8 +26,9 @@
 
 ---
 
-### Status of: 2021.04.18
+### Status of: 2021.04.21
 Partial Home Assistant configuration with themes, templates and views.
+Everything what i do is on a test base. trying to add everything in secrets.yaml (if possible) 
 
 ### System Architecture
 
