@@ -21,7 +21,7 @@
             type: alarm-panel
             states:
               - arm_away
-            entity: alarm_control_panel.home_alarm
+            entity: !secret alarm_panel
             name: Alarm Control Center
             theme: Backend-selected 
 ## Sensoren
@@ -33,7 +33,7 @@
                   card:
                     - width: 5px
                 type: 'custom:button-card'
-              - entity: binary_sensor.contact_sensor_voordeur
+              - entity: !secret contact_sensor_voordeur
                 extra_styles: |
                   @keyframes mymove {
                   50% {box-shadow: 0 0 20px red;}
@@ -74,7 +74,7 @@
                         - white-space: unset
                         - word-break: break-word
                 type: 'custom:button-card'
-              - entity: binary_sensor.entree_sensor_motion
+              - entity: !secret entree_sensor_motion
                 extra_styles: |
                   @keyframes mymove {
                   50% {box-shadow: 0 0 20px red;}
@@ -115,7 +115,7 @@
                         - white-space: unset
                         - word-break: break-word
                 type: 'custom:button-card'
-              - entity: binary_sensor.wc_sensor_motion
+              - entity: !secret wc_sensor_motion
                 extra_styles: |
                   @keyframes mymove {
                   50% {box-shadow: 0 0 20px red;}
@@ -165,7 +165,7 @@
                   card:
                     - width: 5px
                 type: 'custom:button-card'
-              - entity: binary_sensor.contact_sensor_achterdeur
+              - entity: !secret contact_sensor_achterdeur
                 extra_styles: |
                   @keyframes mymove {
                   50% {box-shadow: 0 0 20px red;}
@@ -206,13 +206,13 @@
                         - white-space: unset
                         - word-break: break-word
                 type: 'custom:button-card'
-              - entity: binary_sensor.logi_circle_kai
+              - entity: !secret contact_sensor_balkon
                 extra_styles: |
                   @keyframes mymove {
                   50% {box-shadow: 0 0 20px red;}
                   }
-                icon: 'mdi:bed'
-                name: Kai
+                icon: 'mdi:door'
+                name: Balkon
                 state:
                   - icon: 'mdi:bed'
                     styles:
@@ -229,7 +229,7 @@
                         - word-break: break-word
                     value: 'off'
                   - color: white
-                    icon: 'mdi:bed'
+                    icon: 'mdi:door'
                     operator: default
                     styles:
                       card:
@@ -247,15 +247,15 @@
                         - white-space: unset
                         - word-break: break-word
                 type: 'custom:button-card'
-              - entity: binary_sensor.logi_circle_fay
+              - entity: !secret contact_sensor_master_window
                 extra_styles: |
                   @keyframes mymove {
                   50% {box-shadow: 0 0 20px red;}
                   }
-                icon: 'mdi:bed'
-                name: Fay
+                icon: 'mdi:window-open'
+                name: Master (ramen)
                 state:
-                  - icon: 'mdi:bed'
+                  - icon: 'mdi:window-open'
                     styles:
                       card: null
                       icon:
@@ -270,7 +270,7 @@
                         - word-break: break-word
                     value: 'off'
                   - color: white
-                    icon: 'mdi:bed'
+                    icon: 'mdi:window-open'
                     operator: default
                     styles:
                       card:
@@ -291,13 +291,13 @@
             type: horizontal-stack
           - cards:
               - color_type: blank-card
-                icon: 'mdi:led-strip-variant'
-                name: Floor
+                icon: 'mdi:fridge-outline'
+                name: Keuken
                 styles:
                   card:
                     - width: 5px
                 type: 'custom:button-card'
-              - entity: binary_sensor.logi_circle_zolder
+              - entity: !secret contact_sensor_keuken_window
                 extra_styles: |
                   @keyframes mymove {
                   50% {box-shadow: 0 0 20px red;}
@@ -320,7 +320,7 @@
                         - word-break: break-word
                     value: 'off'
                   - color: white
-                    icon: 'mdi:home-roof'
+                    icon: 'mdi:fridge-outline'
                     operator: default
                     styles:
                       card:
@@ -338,15 +338,15 @@
                         - white-space: unset
                         - word-break: break-word
                 type: 'custom:button-card'
-              - entity: binary_sensor.logi_circle_nyk
+              - entity: binary_sensor.contact_sensor_livingroom_window
                 extra_styles: |
                   @keyframes mymove {
                   50% {box-shadow: 0 0 20px red;}
                   }
-                icon: 'mdi:bed'
-                name: Nyk
+                icon: 'mdi:sofa'
+                name: Woonkamer
                 state:
-                  - icon: 'mdi:bed'
+                  - icon: 'mdi:sofa'
                     styles:
                       card: null
                       icon:
@@ -361,7 +361,7 @@
                         - word-break: break-word
                     value: 'off'
                   - color: white
-                    icon: 'mdi:bed'
+                    icon: 'mdi:sofa'
                     operator: default
                     styles:
                       card:
