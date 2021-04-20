@@ -6,3 +6,11 @@ more_page:
         main_menu: 'true' #Show this addon in the main navigation bar!
         icon: mdi:weather-partly-snowy-rainy
         path: 'dwains-dashboard/addons/more_page/weather/page.yaml'
+      - name: Climate Dashboard
+        icon: mdi:home-thermometer-outline
+        main_menu: 'true' #Show this addon in the main navigation bar!
+        path: 'dwains-dashboard/addons/more_page/climate_dashboard/page.yaml'
+      - name: UptimeRobot
+        main_menu: 'true' #Show this addon in the main navigation bar!
+        icon: mdi:cloud-upload-outline
+        path: 'dwains-dashboard/addons/more_page/uptimerobot/page.yaml'
