@@ -302,8 +302,8 @@
                   @keyframes mymove {
                   50% {box-shadow: 0 0 20px red;}
                   }
-                icon: 'mdi:home-roof'
-                name: Zolder
+                icon: 'mdi:fridge-outline'
+                name: Keuken
                 state:
                   - icon: 'mdi:home-roof'
                     styles:
