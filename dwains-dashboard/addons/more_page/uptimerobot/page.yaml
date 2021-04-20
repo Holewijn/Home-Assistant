@@ -118,7 +118,7 @@
                 action: url
                 url_path: 'https://www.google.com/'
             - type: 'custom:uptime-card'
-              entity: sensor.radarr_online
+              entity: binary_sensor.radarr_online
               icon: 'mdi:movie'
               name: Radarr
               hours_to_show: 72
