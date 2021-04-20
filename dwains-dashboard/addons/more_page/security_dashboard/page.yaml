@@ -79,10 +79,10 @@
                   @keyframes mymove {
                   50% {box-shadow: 0 0 20px red;}
                   }
-                icon: 'mdi:key'
+                icon: 'mdi:key-outline'
                 name: Entree
                 state:
-                  - icon: 'mdi:key'
+                  - icon: 'mdi:key-outline'
                     styles:
                       card: null
                       icon:
@@ -97,7 +97,7 @@
                         - word-break: break-word
                     value: 'off'
                   - color: white
-                    icon: 'mdi:key'
+                    icon: 'mdi:key-outline'
                     operator: default
                     styles:
                       card:
@@ -338,15 +338,15 @@
                         - white-space: unset
                         - word-break: break-word
                 type: 'custom:button-card'
-              - entity: binary_sensor.contact_sensor_livingroom_window
+              - entity: !secret contact_sensor_livingroom_window
                 extra_styles: |
                   @keyframes mymove {
                   50% {box-shadow: 0 0 20px red;}
                   }
-                icon: 'mdi:sofa'
+                icon: 'mdi:sofa-outline'
                 name: Woonkamer
                 state:
-                  - icon: 'mdi:sofa'
+                  - icon: 'mdi:sofa-outline'
                     styles:
                       card: null
                       icon:
@@ -361,7 +361,7 @@
                         - word-break: break-word
                     value: 'off'
                   - color: white
-                    icon: 'mdi:sofa'
+                    icon: 'mdi:sofa-outline'
                     operator: default
                     styles:
                       card:
@@ -379,15 +379,15 @@
                         - white-space: unset
                         - word-break: break-word
                 type: 'custom:button-card'
-              - entity: binary_sensor.kantoor_sensor_motion
+              - entity: !secret kantoor_sensor_motion
                 extra_styles: |
                   @keyframes mymove {
                   50% {box-shadow: 0 0 20px red;}
                   }
-                icon: 'mdi:briefcase'
+                icon: 'mdi:briefcase-outline'
                 name: Kantoor
                 state:
-                  - icon: 'mdi:briefcase'
+                  - icon: 'mdi:briefcase-outline'
                     styles:
                       card: null
                       icon:
@@ -402,7 +402,7 @@
                         - word-break: break-word
                     value: 'off'
                   - color: white
-                    icon: 'mdi:briefcase'
+                    icon: 'mdi:briefcase-outline'
                     operator: default
                     styles:
                       card:
