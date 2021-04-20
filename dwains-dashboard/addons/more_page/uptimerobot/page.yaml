@@ -188,7 +188,7 @@
             - type: 'custom:uptime-card'
               entity: binary_sensor.nzbget_online
               icon: 'mdi:download'
-              name: nzbget
+              name: NZBGet
               hours_to_show: 72
               status_adaptive_color: true
               average_text: '% uptime'
