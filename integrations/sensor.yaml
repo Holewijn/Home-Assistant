@@ -151,3 +151,32 @@ sensor:
   
   - platform: moon 
   - platform: season
+
+# Uptime robot view
+# Unraid dockers online status
+# Server online status
+
+# NZBGet
+  - platform: command_line
+    name: "NZBGet Online"
+    command: response=$(curl -LIk -m 3 192.168.1.190:6789 -o /dev/null -w "%{http_code}\n" -s); test "$response" -ge 200 && echo "Online" || echo "Offline"
+    scan_interval: 90
+    value_template: "{{ value }}"
+# Sonarr
+  - platform: command_line
+    name: "Sonarr Online"
+    command: response=$(curl -LIk -m 3 192.168.1.190:8200 -o /dev/null -w "%{http_code}\n" -s); test "$response" -ge 200 && echo "Online" || echo "Offline"
+    scan_interval: 90
+    value_template: "{{ value }}"
+# Radarr
+  - platform: command_line
+    name: "NZBGet Online"
+    command: response=$(curl -LIk -m 3 192.168.1.190:7878 -o /dev/null -w "%{http_code}\n" -s); test "$response" -ge 200 && echo "Online" || echo "Offline"
+    scan_interval: 90
+    value_template: "{{ value }}"
+# WATERMETER
+  - platform: command_line
+    name: "NZBGet Online"
+    command: response=$(curl -LIk -m 3 192.168.1.238 -o /dev/null -w "%{http_code}\n" -s); test "$response" -ge 200 && echo "Online" || echo "Offline"
+    scan_interval: 90
+    value_template: "{{ value }}"
