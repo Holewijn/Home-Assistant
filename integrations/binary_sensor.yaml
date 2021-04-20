@@ -3,10 +3,29 @@
 binary_sensor:
   - platform: uptimerobot
     api_key: !secret uptimerobot
+
+# Uptime robot view
+# Unraid dockers online status
+# Server online status
+
 # Radarr
   - platform: command_line
     name: "Radarr Online"
     command: curl 192.168.1.190:7878 > /dev/null && echo on || echo off
+    scan_interval: 90
+    payload_on: "on"
+    payload_off: "off"
+# Sonarr
+  - platform: command_line
+    name: "Sonarr Online"
+    command: curl 192.168.1.190:8200 > /dev/null && echo on || echo off
+    scan_interval: 90
+    payload_on: "on"
+    payload_off: "off"
+# NZBGet
+  - platform: command_line
+    name: "NZBGet Online"
+    command: curl 192.168.1.190:6789 > /dev/null && echo on || echo off
     scan_interval: 90
     payload_on: "on"
     payload_off: "off"
