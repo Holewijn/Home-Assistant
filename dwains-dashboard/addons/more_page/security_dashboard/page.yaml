@@ -214,7 +214,7 @@
                 icon: 'mdi:door'
                 name: Balkon
                 state:
-                  - icon: 'mdi:bed'
+                  - icon: 'mdi:door'
                     styles:
                       card: null
                       icon:
